@@ -26,6 +26,9 @@ switch ($method) {
     case 'POST':
         $userController->store();
         break;
+    case 'PUT':
+        $userController->store();
+        break;
     default:
         echo json_encode(array('message' => 'Invalid request method.'));
         break;

@@ -35,4 +35,19 @@ class User {
 
         return false;
     }
+
+    public function updateUser($name, $email, $id) {
+        $name = $this->conn->real_escape_string($name);
+        $email = $this->conn->real_escape_string($email);
+        $id = $this->conn->real_escape_string($id);
+
+        $query = "UPDATE " . $this->table . " SET name='$name','email='$email' where id='$id'";
+        $result = $this->conn->query($query);
+
+        if ($result) {
+            return true;
+        }
+
+        return false;
+    }
 }

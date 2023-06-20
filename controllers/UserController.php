@@ -64,4 +64,18 @@ class UserController {
             echo json_encode(array('message' => 'Name and email are required.'));
         }
     }
+
+    public function put() {
+        $data = json_decode(file_get_contents("php://input"));
+
+        if (!empty($data->name) && !empty($data->email) && !empty($data->id)) {
+            if ($this->user->updateUser($data->name, $data->email, $data->id)) {
+                echo json_encode(array('message' => 'User update successfully.'));
+            } else {
+                echo json_encode(array('message' => 'User update failed.'));
+            }
+        } else {
+            echo json_encode(array('message' => 'Name and email are required.'));
+        }
+    }
 }
