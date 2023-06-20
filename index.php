@@ -14,11 +14,6 @@ $routeParts = explode('/', $route);
 $resource = array_shift($routeParts);
 $resource = strtok($resource, '?');
 
-var_dump($requestUri);
-var_dump($route);
-var_dump($routeParts);
-var_dump($resource);
-
 // Define the file path based on the resource
 $filePath = __DIR__ . '/routes/' . $resource . '.php';
 
