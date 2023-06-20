@@ -65,7 +65,7 @@ class UserController {
         }
     }
 
-    public function put() {
+    public function update() {
         $data = json_decode(file_get_contents("php://input"));
 
         if (!empty($data->name) && !empty($data->email) && !empty($data->id)) {
