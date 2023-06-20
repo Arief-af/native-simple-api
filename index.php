@@ -1,3 +1,3 @@
 <?php
-json_encode(array('message' => 'Welcome'));
+echo json_encode(array('message' => 'Welcome'));
 ?>
