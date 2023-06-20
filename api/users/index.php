@@ -2,10 +2,9 @@
 
 header('Content-Type: application/json');
 
-include_once 'config.php';
-include_once 'utils/Database.php';
-include_once 'models/User.php';
-include_once 'controllers/UserController.php';
+include_once '../../utils/Database.php';
+include_once '../../models/User.php';
+include_once '../../controllers/UserController.php';
 
 $database = new Database();
 $db = $database->connect();
