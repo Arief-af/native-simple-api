@@ -40,14 +40,14 @@ class User {
         $name = $this->conn->real_escape_string($name);
         $email = $this->conn->real_escape_string($email);
         $id = $this->conn->real_escape_string($id);
-
-        $query = "UPDATE " . $this->table . " SET name='$name','email='$email' where id='$id'";
+    
+        $query = "UPDATE " . $this->table . " SET name='$name', email='$email' WHERE id='$id'";
         $result = $this->conn->query($query);
-
+    
         if ($result) {
             return true;
         }
-
+    
         return false;
-    }
+    }    
 }
