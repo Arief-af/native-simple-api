@@ -3,7 +3,7 @@
 header('Content-Type: application/json');
 
 // Define the base path for the API
-$basePath = '/native_api/index.php/api';
+$basePath = '/api';
 
 // Extract the requested route from the URL
 $requestUri = $_SERVER['REQUEST_URI'];
